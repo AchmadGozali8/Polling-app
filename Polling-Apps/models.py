@@ -8,7 +8,7 @@ class User(db.Model):
 
 	#fields
 	id = db.Column(db.Integer,primary_key=True)
-	full_name=db.Column(db.String(120))
+	nama_lengkap = db.Column(db.String(120))
 	email = db.Column(db.String(120), unique=True)
 
 	def __init__(self, full_name,email):
