@@ -11,8 +11,8 @@ class User(db.Model):
 	nama_lengkap = db.Column(db.String(120))
 	email = db.Column(db.String(120), unique=True)
 
-	def __init__(self, full_name,email):
-		self.full_name = full_name
+	def __init__(self, nama_lengkap,email):
+		self.nama_lengkap = nama_lengkap
 		self.email = email
 	def __repr__(self):
-		return "<User {}".format(self.full_name)
+		return "<User {}".format(self.nama_lengkap)
