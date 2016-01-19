@@ -13,7 +13,7 @@ db.init_app(app)
 @app.route('/',methods=["POST","GET"])
 def register():
 	if request.method=="POST":
-		nama_lengkap = request.form.get("full_name", None)
+		nama_lengkap = request.form.get("nama_lengkap", None)
 		email = request.form.get("email",None)
 		if not validation([nama_lengkap, email]):
 			error = 'too stupid'
